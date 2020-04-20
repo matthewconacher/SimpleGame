@@ -1,7 +1,7 @@
 # L1T15
 ## A Simple Game Using Pygame
 
-This is a very simple side scrolling game that uses collision detection. 
+>This is a very simple side scrolling game that uses collision detection. 
 
 Arrow keys can be used to move the player object up/down, left or right.
 
