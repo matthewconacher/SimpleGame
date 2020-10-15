@@ -1,4 +1,4 @@
-# L1T15
+# SimpleGame
 ## A Simple Game Using Pygame
 
 This is a very simple side scrolling game that uses collision detection. 
