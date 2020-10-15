@@ -82,26 +82,12 @@ PRIZE1_YPOSITION = random.randint(0, SCREEN_HEIGHT - PRIZE1_HEIGHT)
 PRIZE2_XPOSITION = random.randint(0, SCREEN_WIDTH - PRIZE2_WIDTH)
 PRIZE2_YPOSITION = random.randint(0, SCREEN_HEIGHT - PRIZE2_HEIGHT)
 
-# This checks if the up or down key is pressed.
-# Right now they are not so make them equal to the boolean value (True or False) of False.
-# Boolean values are True or False values that can be used to test conditions and test states that
-# are binary, i.e. either one way or the other.
-
 KEY_UP = False
 KEY_DOWN = False
 KEY_LEFT = False
 KEY_RIGHT = False
 
 # This is the game loop.
-# In games you will need to run the game logic over and over again.
-# You need to refresh/update the screen window and apply changes to
-# represent real time game play.
-
-# This is a looping structure that will loop the indented code until you tell it to stop(in the
-# event where you exit the program by quitting). In Python the int 1 has the boolean value of
-# 'true'. In fact numbers greater than 0 also do. 0 on the other hand has a boolean value of false.
-# You can test this out with the bool(...) function to see what boolean value types have. You will
-# learn more about while loop structers later.
 
 while 1:
     SCREEN.fill(0) # Clears the screen.
@@ -153,11 +139,6 @@ while 1:
             if event.key == pygame.K_RIGHT:
                 KEY_RIGHT = False
 
-    # After events are checked for in the for loop above and values are set,
-    # check key pressed values and move player accordingly.
-    # The coordinate system of the game window(screen) is that the top left corner is (0, 0).
-    # This means that if you want the player to move down you will have to increase the y position.
-
     if KEY_UP:
         # This makes sure that the user does not move the player above the window.
         if PLAYER_YPOSITION > 0:
@@ -176,8 +157,6 @@ while 1:
             PLAYER_XPOSITION += 3
 
     # Check for collision of the enemy with the player.
-    # To do this we need bounding boxes around the images of the player and enemy.
-    # We the need to test if these boxes intersect. If they do then there is a collision.
 
     # Bounding box for the player:
     PLAYER_BOX = pygame.Rect(PLAYER.get_rect())
@@ -247,5 +226,3 @@ while 1:
     ENEMY1_XPOSITION -= 1
     ENEMY2_XPOSITION -= 1
     ENEMY3_XPOSITION -= 1
-
-    # ================The game loop logic ends here. =============
